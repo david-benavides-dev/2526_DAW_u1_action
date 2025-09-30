@@ -1,11 +1,12 @@
 import subprocess
+from datetime import datetime
 
 def run_tests():
     try:
         subprocess.check_call(["pytest", "-q"])
-        return "✅ Tests correctos"
+        return f"- ✅ {datetime.now()} Tests correctos"
     except subprocess.CalledProcessError:
-        return "❌ Tests fallidos"
+        return f"- ❌ {datetime.now()} Tests fallidos"
 
 def update_readme(status: str):
     with open("README.md", "r", encoding="utf-8") as f:
@@ -16,7 +17,6 @@ def update_readme(status: str):
         new_lines.append(line)
         if line.strip() == "## Estado de los tests":
             new_lines.append(status + "\n")
-            break
 
     with open("README.md", "w", encoding="utf-8") as f:
         f.writelines(new_lines)
