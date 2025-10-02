@@ -1,2 +1,11 @@
+
 def saludo(nombre: str) -> str:
-    return f"Hola, {nombre}!" # Cambio para forzar error. Para que no falle: f"Hola, {nombre}!"
+    """
+    Recibe una palabra por parámetro y retorna un string concatenando la misma junto a un hola" ex-> "Hola, David!"
+    Args:
+        nombre(str): Nombre o palabra a saludar.
+
+    Returns:
+        str: Una cadena con el saludo personalizado de "Hola" + la palabra recibida por parámetro.
+    """
+    return f"Hola, {nombre}!"
