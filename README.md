@@ -1,8 +1,13 @@
 # Mejorando un Workflow con GitHub Actions
 
 # Descripción
+A partir de un repositorio base realizado por el profesor, en esta práctica he trabajado con workflow mediante github actions, cuyo objetivo principal ha sido mejorar uno ya existente para la generación automática de documentación. El ejercicio consiste en comprender un flujo básico que ya está implementado y posteriormente, adaptarlo para que fuese capaz de generar documentación en diferentes formatos (HTML y MD) de forma automática.
+
 # Introducción
+
+
 # Desarrollo de la práctica
+El desarrollo de la práctica fué simple. Primero comencé a comprender el flujo de trabajo, el cual ejecutaba pruebas unitarias y actualizaba automáticamente el README del repo. Si bien el código original funcionaba, basándome en un README anterior de otro ejercicio, decidí actualizar el código para que, además del mensaje de los tests, también muestre la fecha y hora haciendo uso del módulo datetime. También removí el break que había en el condicional que estaba dentro del bucle for, pues borraba todo el contenido del readme que estaba después de "Estado de los tests".
 # Conclusión
 # Bibliografía
 
