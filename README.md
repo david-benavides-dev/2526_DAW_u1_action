@@ -19,6 +19,7 @@ A partir de un repositorio base realizado por el profesor, en esta práctica he 
 # Bibliografía
 
 ## Estado de los tests
+- ✅ 2025-10-02 20:50:18.075051 Tests correctos
 - ✅ 2025-10-02 20:34:26.742232 Tests correctos
 - ✅ 2025-10-02 20:22:33.413266 Tests correctos
 
