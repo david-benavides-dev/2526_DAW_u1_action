@@ -1,7 +1,7 @@
 # Mejorando un Workflow con GitHub Actions
 
 # Descripción
-A partir de un repositorio base realizado por el profesor, en esta práctica he trabajado con workflow mediante github actions, cuyo objetivo principal ha sido mejorar uno ya existente para la generación automática de documentación. El ejercicio consiste en comprender un flujo básico que ya está implementado y posteriormente, adaptarlo para que fuese capaz de generar documentación en diferentes formatos (HTML y MD) de forma automática.
+A partir de un repositorio base realizado por el profesor, en esta práctica he trabajado con `workflow` mediante `github actions`, cuyo objetivo principal ha sido mejorar uno ya existente para la generación automática de documentación. El ejercicio consiste en comprender un flujo básico que ya está implementado y posteriormente, adaptarlo para que fuese capaz de generar documentación en diferentes formatos (HTML y MD) de forma automática.
 
 # Introducción
 
@@ -9,12 +9,16 @@ A partir de un repositorio base realizado por el profesor, en esta práctica he 
 # Desarrollo de la práctica
 - Comencé a comprender el flujo de trabajo, el cual ejecutaba pruebas unitarias y actualizaba automáticamente el `README` del repositorio.
 - Si bien el código original funcionaba, basándome en un `README` anterior de otro ejercicio, decidí actualizar el código para que, además del mensaje de los tests, también muestre la fecha y hora haciendo uso del módulo `datetime`.  
-- Removí el `break` que había en el condicional que estaba dentro del bucle `for`, pues borraba todo el contenido del readme que estaba después de "Estado de los tests".  
+- Removí el `break` que había en el condicional que estaba dentro del bucle `for`, pues borraba todo el contenido del `README` que estaba después de "Estado de los tests".
+- Documenté la función `saludo` del archivo `main.py`.
+- Instalé pdoc utilizandp `pip install pdoc` y probé a utilizar `pdoc -o docs/html main.py` de manera local en mi proyecto.
+- Configuré el archivo `ci.yaml` para que instalase las dependencias necesarias (en este caso, pdoc) con `run: pip install pdoc`.
+- Añadí el comando que utilicé de manera local en el ci.yaml para que se genere la documentación al activar la action.
+- Cambié varios mensajes para que fuesen más descriptivos en el archivo `ci.yaml` y añadí otro commit automático de los archivos que se generan en la carpeta `docs/` utilizando `git-auto-commit-action`, haciendo que cada vez que `workflow` genere nueva documentación, los cambios queden registrados en el historial de commits con el mensaje "documentación web actualizada".
 # Conclusión
 # Bibliografía
 
 ## Estado de los tests
-- ✅ 2025-10-02 20:39:37.896395 Tests correctos
 - ✅ 2025-10-02 20:34:26.742232 Tests correctos
 - ✅ 2025-10-02 20:22:33.413266 Tests correctos
 
