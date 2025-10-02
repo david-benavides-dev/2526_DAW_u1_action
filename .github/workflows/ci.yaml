@@ -35,6 +35,8 @@ jobs:
           commit_message: "Update README con estado de tests"
           file_pattern: README.md
 
+      - name: Generar documentación HTML usando pdoc
+        run: pdoc -o docs/html main.py
 
       - name: Actualizando documentación web
         uses: stefanzweifel/git-auto-commit-action@v5
