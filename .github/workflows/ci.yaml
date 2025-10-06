@@ -24,7 +24,7 @@ jobs:
       - name: Instalar pytest
         run: pip install pytest
       - name: Instalar pdoc
-        run: pip install pdoc==6.1.1
+        run: pip install pdoc
 
       - name: Ejecutar script de tests y actualizar README
         run: python update_readme.py
@@ -38,8 +38,8 @@ jobs:
       - name: Generar documentación HTML usando pdoc
         run: pdoc -o docs/_build/html main.py
 
-      - name: Generar documentación MD usando pdoc
-        run: pdoc --markdown -o docs/md main.py
+      # - name: Generar documentación MD usando pdoc
+      #   run: pdoc --markdown -o docs/md main.py <- --markdown no funciona con pdoc actual y las versiones antiguas tienen problemas de dependencias, revert.
 
       - name: Actualizando documentación web
         uses: stefanzweifel/git-auto-commit-action@v5
