@@ -36,7 +36,10 @@ jobs:
           file_pattern: README.md
 
       - name: Generar documentación HTML usando pdoc
-        run: pdoc -o docs/html main.py
+        run: pdoc -o docs/_build/html main.py
+
+      - name: Generar documentación MD usando pdoc
+        run: pdoc --markdown -o docs/md main.py
 
       - name: Actualizando documentación web
         uses: stefanzweifel/git-auto-commit-action@v5
